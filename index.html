@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    h2{
+        text-align: center;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+    button{
+        padding: 20px;
+        color: red;
+        text-transform: uppercase;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+    
+    <h2>Backround Color Change</h2>
+    <div>
+        <button id="btn">Random Color</button>
+    </div>
+    
+    
+    <script>
+        var button = document.getElementById("btn");
+        button.addEventListener("click",myFunction);
+
+        function myFunction(){
+            var color = "0123456789ABCDEF"
+            var hexa = "#";
+            for(i=0;i<6;i++){
+                hexa += color[Math.floor(Math.random()*16)]
+            } 
+            document.body.style.backgroundColor = hexa;
+        }
+    </script>
+</body>
+</html>
